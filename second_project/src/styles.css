@@ -1,0 +1,21 @@
+body {
+  background: #cecece;
+
+}
+.hello
+{ 
+    padding: 10px 20px;
+    background: red;
+}
+.inlinebox {
+    border: 1px solid;
+    padding: 20px;
+    display: -webkit-inline-box;
+    margin: 20px;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    min-height: 230px;
+}

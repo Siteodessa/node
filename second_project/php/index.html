@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<body>
+  <form>
+<input type="text" id="name" />
+<input type="text" id="link" />
+<input type="text" id="parent" />
+    <input type="submit" id="add" />
+    </form>
+
+  <script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+  $('#add').click(function(){
+    var name = $('#name').attr('value'),
+        link = $('#link').attr('value'),
+        parent = $('#parent').attr('value'),
+        data = 'comand=add&name='+name+'&link='+link+'&parent='+parent;
+    $.ajax({
+      type: "POST",
+      url: "brainstorm.php",
+      data: data
+    });
+    alert(name);
+  });
+</script>
+  
+  
+</body>
+</html>
