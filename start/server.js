@@ -1,0 +1,21 @@
+// module.exports = exports = this
+var db = require('db');
+db.connect();
+
+var User = require('./user');
+
+function run() {
+
+  var vasya = new User('Вася');
+  var petya = new User('Петя');
+  vasya.hello(petya);
+
+console.log(db.gPhr("Run successful"));
+
+}
+if(module.parent) {
+  exports.run = run
+}
+else {
+  run();
+}
