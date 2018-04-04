@@ -1,17 +1,14 @@
 // module.exports = exports = this
-var db = require('db');
-db.connect();
-
+var log = require('logger')(module);
+var db = require("db");
 var User = require('./user');
+db.connect();
+// Pre party end
 
 function run() {
-
-  var vasya = new User('Вася');
-  var petya = new User('Петя');
-  vasya.hello(petya);
-
+  var amal = new User('Амаль');
+  amal.hello(amal);
 console.log(db.gPhr("Run successful"));
-
 }
 if(module.parent) {
   exports.run = run
